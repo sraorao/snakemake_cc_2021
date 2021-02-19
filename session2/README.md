@@ -1,4 +1,4 @@
-# Advanced Snakemake tutorial 
+# Session II
 (Please read [Intro to snakemake](https://github.com/sraorao/snakemake_cc_2021/tree/main/session1) to become familiar with 
 Snakemake first.)
 
