@@ -1,5 +1,5 @@
 # Advanced Snakemake tutorial 
-(Please read [Intro to snakemake](https://github.com/sraorao/snakemake_cc_2021/session1/) to become familiar with 
+(Please read [Intro to snakemake](https://github.com/sraorao/snakemake_cc_2021/tree/main/session1) to become familiar with 
 Snakemake first.)
 
 This is code to build an example [Snakemake](https://snakemake.readthedocs.io/) workflow to process a set of Fastq files. 
