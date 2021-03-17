@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job counts:
+	count	jobs
+	1	plot_dupmetrics_python
+	1
+Select jobs to execute...
+
+[Wed Mar 17 00:06:37 2021]
+rule plot_dupmetrics_python:
+    input: data/dupmarked_bam/A_dupmetrics.txt, data/dupmarked_bam/B_dupmetrics.txt, data/dupmarked_bam/C_dupmetrics.txt, data/dupmarked_bam/D_dupmetrics.txt
+    output: data/plots/dups_python.pdf
+    jobid: 0
+
+Traceback (most recent call last):
+  File "/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/scripts/tmp3lbu7g0p.plot.py", line 12, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+[Wed Mar 17 00:06:42 2021]
+Error in rule plot_dupmetrics_python:
+    jobid: 0
+    output: data/plots/dups_python.pdf
+
+RuleException:
+CalledProcessError in line 85 of /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/Snakefile_inputfunc.smk:
+Command 'set -euo pipefail;  /well/hamdy/shared/conda-envs/snakemake/bin/python3.8 /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/scripts/tmp3lbu7g0p.plot.py' returned non-zero exit status 1.
+  File "/well/hamdy/shared/conda-envs/snakemake/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2318, in run_wrapper
+  File "/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/Snakefile_inputfunc.smk", line 85, in __rule_plot_dupmetrics_python
+  File "/well/hamdy/shared/conda-envs/snakemake/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 560, in _callback
+  File "/well/hamdy/shared/conda-envs/snakemake/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+  File "/well/hamdy/shared/conda-envs/snakemake/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 546, in cached_or_run
+  File "/well/hamdy/shared/conda-envs/snakemake/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2349, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+['A', 'B', 'C', 'D']

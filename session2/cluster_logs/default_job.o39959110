@@ -1,0 +1,53 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	plot_dupmetrics
+	1
+Select jobs to execute...
+
+[Wed Mar 17 00:26:21 2021]
+rule plot_dupmetrics:
+    input: data/dupmarked_bam/A_dupmetrics.txt, data/dupmarked_bam/B_dupmetrics.txt, data/dupmarked_bam/C_dupmetrics.txt, data/dupmarked_bam/D_dupmetrics.txt
+    output: data/plots/dups.pdf
+    jobid: 0
+
+Activating environment modules: R/default
+Activating conda environment: /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/3545b661
+[1] "----------------------------Slots in the snakemake S4 object----------------------------"
+ [1] "input"           "output"          "params"          "wildcards"      
+ [5] "threads"         "log"             "resources"       "config"         
+ [9] "rule"            "bench_iteration" "scriptdir"       "source"         
+[1] "--------------------------Structure of the snakemake S4 object--------------------------"
+Formal class 'Snakemake' [package ".GlobalEnv"] with 12 slots
+  ..@ input          :List of 4
+  .. ..$ : chr "data/dupmarked_bam/A_dupmetrics.txt"
+  .. ..$ : chr "data/dupmarked_bam/B_dupmetrics.txt"
+  .. ..$ : chr "data/dupmarked_bam/C_dupmetrics.txt"
+  .. ..$ : chr "data/dupmarked_bam/D_dupmetrics.txt"
+  ..@ output         :List of 1
+  .. ..$ : chr "data/plots/dups.pdf"
+  ..@ params         : list()
+  ..@ wildcards      : list()
+  ..@ threads        : num 1
+  ..@ log            : list()
+  ..@ resources      : list()
+  ..@ config         :List of 5
+  .. ..$ REF38      : chr "/users/hamdy/hyn435/shared/hg38/Homo_sapiens_assembly38.fasta"
+  .. ..$ REF37      : chr "/users/hamdy/hyn435/shared/hg37d5/hs37d5.fasta"
+  .. ..$ PROJECT    : chr "PRJNA526724"
+  .. ..$ SAMPLES    : chr [1:4] "A" "B" "C" "D"
+  .. ..$ REF_VERSION: num 37
+  ..@ rule           : chr "plot_dupmetrics"
+  ..@ bench_iteration: num NA
+  ..@ scriptdir      : chr "/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/scripts"
+  ..@ source         :function (...)  
+[1] "----------------------------------------------------------------------------------------"
+null device 
+          1 
+[Wed Mar 17 00:26:34 2021]
+Finished job 0.
+1 of 1 steps (100%) done
+['A', 'B', 'C', 'D']
