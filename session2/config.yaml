@@ -1,5 +1,5 @@
-REF38: "/media/srao/hdd1_p2/gatk_resource_bundle/hg38/Homo_sapiens_assembly38.fasta" # your reference bwa index
-REF37: "/media/srao/hdd1_p2/other_resources/hg37d5/hs37d5.fasta" # your reference bwa index
+REF38: "/users/hamdy/hyn435/shared/hg38/Homo_sapiens_assembly38.fasta" # your reference bwa index
+REF37: "/users/hamdy/hyn435/shared/hg37d5/hs37d5.fasta" # your reference bwa index
 # REF37: "/well/htseq/Genomes/BWA-0.7/hs37d5" # reference fasta available on Rescomp
 # REF38:
 PROJECT: "PRJNA526724"

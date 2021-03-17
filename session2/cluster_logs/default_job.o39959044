@@ -1,0 +1,23 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	sort_bams
+	1
+Select jobs to execute...
+
+[Tue Mar 16 23:36:53 2021]
+rule sort_bams:
+    input: data/sam/C.sam
+    output: data/bam/C.bam
+    jobid: 0
+    wildcards: sample=C
+
+Activating conda environment: /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/50cd371b
+/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/50cd371b/bin/samtools
+[Tue Mar 16 23:37:01 2021]
+Finished job 0.
+1 of 1 steps (100%) done
+['A', 'B', 'C', 'D']

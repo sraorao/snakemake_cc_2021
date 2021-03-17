@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	align
+	1
+Select jobs to execute...
+
+[Tue Mar 16 23:31:16 2021]
+rule align:
+    input: data/fastq/D.fastq.gz, /users/hamdy/hyn435/shared/hg37d5/hs37d5.fasta
+    output: data/sam/D.sam
+    jobid: 0
+    wildcards: sample=D
+
+Activating conda environment: /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/ef3ea3f4
+/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/ef3ea3f4/bin/bwa
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 68553 sequences (8637678 bp)...
+[M::mem_process_seqs] Processed 68553 reads in 14.998 CPU sec, 15.243 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -t 1 -R @RG\tID:D\tSM:D_subset\tLB:D -o data/sam/D.sam /users/hamdy/hyn435/shared/hg37d5/hs37d5.fasta data/fastq/D.fastq.gz
+[main] Real time: 19.437 sec; CPU: 18.719 sec
+[Tue Mar 16 23:31:43 2021]
+Finished job 0.
+1 of 1 steps (100%) done
+['A', 'B', 'C', 'D']

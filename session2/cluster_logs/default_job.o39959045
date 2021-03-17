@@ -1,0 +1,57 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	mark_dups
+	1
+Select jobs to execute...
+
+[Tue Mar 16 23:37:32 2021]
+rule mark_dups:
+    input: data/bam/C.bam
+    output: data/dupmarked_bam/C_dupmarked.bam, data/dupmarked_bam/C_dupmetrics.txt
+    jobid: 0
+    wildcards: sample=C
+
+Activating conda environment: /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/03cb098b
+/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/03cb098b/bin/gatk
+Using GATK jar /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/03cb098b/share/gatk4-4.1.7.0-0/gatk-package-4.1.7.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/03cb098b/share/gatk4-4.1.7.0-0/gatk-package-4.1.7.0-local.jar MarkDuplicates -I data/bam/C.bam -O data/dupmarked_bam/C_dupmarked.bam -M data/dupmarked_bam/C_dupmetrics.txt
+23:37:43.415 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/03cb098b/share/gatk4-4.1.7.0-0/gatk-package-4.1.7.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+[Tue Mar 16 23:37:43 GMT 2021] MarkDuplicates  --INPUT data/bam/C.bam --OUTPUT data/dupmarked_bam/C_dupmarked.bam --METRICS_FILE data/dupmarked_bam/C_dupmetrics.txt  --MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP 50000 --MAX_FILE_HANDLES_FOR_READ_ENDS_MAP 8000 --SORTING_COLLECTION_SIZE_RATIO 0.25 --TAG_DUPLICATE_SET_MEMBERS false --REMOVE_SEQUENCING_DUPLICATES false --TAGGING_POLICY DontTag --CLEAR_DT true --DUPLEX_UMI false --ADD_PG_TAG_TO_READS true --REMOVE_DUPLICATES false --ASSUME_SORTED false --DUPLICATE_SCORING_STRATEGY SUM_OF_BASE_QUALITIES --PROGRAM_RECORD_ID MarkDuplicates --PROGRAM_GROUP_NAME MarkDuplicates --READ_NAME_REGEX <optimized capture of last three ':' separated fields as numeric values> --OPTICAL_DUPLICATE_PIXEL_DISTANCE 100 --MAX_OPTICAL_DUPLICATE_SET_SIZE 300000 --VERBOSITY INFO --QUIET false --VALIDATION_STRINGENCY STRICT --COMPRESSION_LEVEL 2 --MAX_RECORDS_IN_RAM 500000 --CREATE_INDEX false --CREATE_MD5_FILE false --GA4GH_CLIENT_SECRETS client_secrets.json --help false --version false --showHidden false --USE_JDK_DEFLATER false --USE_JDK_INFLATER false
+Mar 16, 2021 11:37:43 PM shaded.cloud_nio.com.google.auth.oauth2.ComputeEngineCredentials runningOnComputeEngine
+INFO: Failed to detect whether we are running on Google Compute Engine.
+[Tue Mar 16 23:37:43 GMT 2021] Executing as hyn435@rescomp2.hpc.in.bmrc.ox.ac.uk on Linux 3.10.0-1127.18.2.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_265-b11; Deflater: Intel; Inflater: Intel; Provider GCS is available; Picard version: Version:4.1.7.0
+INFO	2021-03-16 23:37:43	MarkDuplicates	Start of doWork freeMemory: 330101304; totalMemory: 341311488; maxMemory: 3628072960
+INFO	2021-03-16 23:37:43	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2021-03-16 23:37:43	MarkDuplicates	Will retain up to 13145191 data points before spilling to disk.
+WARNING: BAM index file /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/data/bam/C.bam.bai is older than BAM /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/data/bam/C.bam
+WARNING	2021-03-16 23:37:43	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: SRR8717006.4633212. Cause: String 'SRR8717006.4633212' did not start with a parsable number.
+INFO	2021-03-16 23:37:44	MarkDuplicates	Read 57979 records. 0 pairs never matched.
+INFO	2021-03-16 23:37:44	MarkDuplicates	After buildSortedReadEndLists freeMemory: 547967520; totalMemory: 670564352; maxMemory: 3628072960
+INFO	2021-03-16 23:37:44	MarkDuplicates	Will retain up to 113377280 duplicate indices before spilling to disk.
+INFO	2021-03-16 23:37:44	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2021-03-16 23:37:44	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2021-03-16 23:37:44	MarkDuplicates	Sorting list of duplicate records.
+INFO	2021-03-16 23:37:44	MarkDuplicates	After generateDuplicateIndexes freeMemory: 838642208; totalMemory: 1763704832; maxMemory: 3628072960
+INFO	2021-03-16 23:37:44	MarkDuplicates	Marking 9110 records as duplicates.
+INFO	2021-03-16 23:37:44	MarkDuplicates	Found 0 optical duplicate clusters.
+WARNING: BAM index file /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/data/bam/C.bam.bai is older than BAM /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/data/bam/C.bam
+INFO	2021-03-16 23:37:44	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2021-03-16 23:37:45	MarkDuplicates	Writing complete. Closing input iterator.
+INFO	2021-03-16 23:37:45	MarkDuplicates	Duplicate Index cleanup.
+INFO	2021-03-16 23:37:45	MarkDuplicates	Getting Memory Stats.
+INFO	2021-03-16 23:37:45	MarkDuplicates	Before output close freeMemory: 1730334168; totalMemory: 1752170496; maxMemory: 3628072960
+INFO	2021-03-16 23:37:45	MarkDuplicates	Closed outputs. Getting more Memory Stats.
+INFO	2021-03-16 23:37:45	MarkDuplicates	After output close freeMemory: 1744219648; totalMemory: 1762656256; maxMemory: 3628072960
+[Tue Mar 16 23:37:45 GMT 2021] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.03 minutes.
+Runtime.totalMemory()=1762656256
+Tool returned:
+0
+[Tue Mar 16 23:37:45 2021]
+Finished job 0.
+1 of 1 steps (100%) done
+['A', 'B', 'C', 'D']

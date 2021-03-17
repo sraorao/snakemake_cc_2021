@@ -1,0 +1,49 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 24
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	plot_dupmetrics_python
+	1
+Select jobs to execute...
+
+[Tue Mar 16 23:52:05 2021]
+rule plot_dupmetrics_python:
+    input: data/dupmarked_bam/A_dupmetrics.txt, data/dupmarked_bam/B_dupmetrics.txt, data/dupmarked_bam/C_dupmetrics.txt, data/dupmarked_bam/D_dupmetrics.txt
+    output: data/plots/dups_python.pdf
+    jobid: 0
+
+Activating conda environment: /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/2ffc94f7
+Activating conda environment: /gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/.snakemake/conda/2ffc94f7
+----------------------------Variables in the snakemake object----------------------------
+{'bench_iteration': None,
+ 'config': {'PROJECT': 'PRJNA526724',
+            'REF37': '/users/hamdy/hyn435/shared/hg37d5/hs37d5.fasta',
+            'REF38': '/users/hamdy/hyn435/shared/hg38/Homo_sapiens_assembly38.fasta',
+            'REF_VERSION': 37,
+            'SAMPLES': ['A', 'B', 'C', 'D']},
+ 'input': ['data/dupmarked_bam/A_dupmetrics.txt',
+           'data/dupmarked_bam/B_dupmetrics.txt',
+           'data/dupmarked_bam/C_dupmetrics.txt',
+           'data/dupmarked_bam/D_dupmetrics.txt'],
+ 'log': [],
+ 'output': ['data/plots/dups_python.pdf'],
+ 'params': [],
+ 'resources': [1, 1],
+ 'rule': 'plot_dupmetrics_python',
+ 'scriptdir': '/gpfs3/well/hamdy/users/hyn435/temp/snakemake_cc_2021/session2/scripts',
+ 'threads': 1,
+ 'wildcards': []}
+----------------------------------------------------------------------------------------
+  LIBRARY  UNPAIRED_READS_EXAMINED  ...  PERCENT_DUPLICATION  ESTIMATED_LIBRARY_SIZE
+0       A                    47048  ...              16.6915                     NaN
+0       B                    53896  ...              19.4449                     NaN
+0       C                    49767  ...              18.3053                     NaN
+0       D                    68552  ...              19.7266                     NaN
+
+[4 rows x 10 columns]
+[Tue Mar 16 23:52:21 2021]
+Finished job 0.
+1 of 1 steps (100%) done
+['A', 'B', 'C', 'D']
